@@ -8,7 +8,7 @@ The system allows you to **register students**, **recognize faces via webcam**, 
 
 ## 📂 Project Structure
 
-SmartFace Attendance/
+Smart FaceAttendance/
 │
 ├── attendance/
 │ └── attendance.csv
