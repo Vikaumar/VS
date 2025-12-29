@@ -1,4 +1,4 @@
-# 🎓 SmartFace Attendance System
+# 🎓 Smart FaceAttendance System
 
 A **real-time face recognition–based attendance system** built using **Python**, **InsightFace** .  
 
