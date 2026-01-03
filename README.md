@@ -1,4 +1,51 @@
-🎓 EduFace AI: Smart Attendance & LMS PlatformA Multi-Role Educational Platform merging Face Recognition, Generative AI, and Voice Analytics.EduFace AI extends traditional attendance systems by integrating a Role-Based Learning Management System (LMS). It uses InsightFace for real-time biometric attendance and OpenAI/LangChain to allow teachers to generate quizzes from curriculum PDFs and query student performance using Voice Commands.🚀 Key Features by Role👨‍🏫 Teacher (The AI Command Center)Real-Time Attendance Dashboard: View live check-ins from the Face Recognition node.Curriculum AI: Upload PDF textbooks/notes; the system automatically generates Quizzes and Lesson Plans using GPT-4o.Voice Analytics: "Talk to your Database." Ask complex questions via voice (e.g., "Who has attendance below 75% and failed the last quiz?") and get instant verbal/text reports.👩‍🎓 Student (Performance View)Personal Dashboard: View personal attendance history and visuals.Performance Tracking: Access quiz scores and generated progress reports.🏫 Management (Oversight)Global Analytics: Aggregate view of attendance trends across the institution.Anomaly Detection: Automated flagging of irregular attendance patterns.🏗️ Architecture & Tech StackComponentTech UsedPurposeBiometricsInsightFace, OpenCVSOTA Face Recognition & Anti-spoofingFrontend/UIStreamlitInteractive Web Dashboard for all rolesBackend LogicPythonCore logic orchestrationDatabaseSQLiteRelational storage for Users, Attendance, MarksGenAIOpenAI API, LangChainQuiz Generation & Natural Language-to-SQLVoiceOpenAI WhisperSpeech-to-Text transcription for analytics📂 Project StructurePlaintextEduFace_AI/
+# 🎓 EduFace AI: Smart Attendance & LMS Platform
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv)
+![OpenAI](https://img.shields.io/badge/GenAI-OpenAI%20GPT4-green?style=for-the-badge&logo=openai)
+![InsightFace](https://img.shields.io/badge/InsightFace-Biometrics-orange?style=for-the-badge)
+
+> **A Multi-Role Educational Platform merging Real-Time Face Recognition, Generative AI, and Voice Analytics.**
+
+**EduFace AI** transforms traditional attendance systems into a smart **Role-Based Learning Management System (LMS)**. It automates attendance using **InsightFace** (SOTA biometrics) and empowers teachers with **Generative AI** to instantly create quizzes from curriculum PDFs and query student performance using natural **Voice Commands**.
+
+---
+
+## 🚀 Key Features by Role
+
+### 👨‍🏫 **Teacher (The AI Command Center)**
+* **Real-Time Attendance Dashboard:** Monitor live class attendance feeds.
+* **Curriculum AI:** Upload PDF textbooks/notes; the system automatically generates **Quizzes** and **Lesson Plans** using GPT-4o.
+* **Voice Analytics (Talk-to-DB):** Ask complex questions via voice (e.g., *"Who has attendance below 75% and failed the last quiz?"*) and get instant verbal/text reports generated via SQL agents.
+
+### 👩‍🎓 **Student (Performance View)**
+* **Personal Dashboard:** View own attendance logs and visual trends.
+* **Performance Tracking:** Access quiz history and AI-generated progress summaries.
+
+### 🏫 **Management (Oversight)**
+* **Global Analytics:** Aggregate institution-wide attendance data.
+* **Anomaly Detection:** Automated flagging of irregular patterns (e.g., frequent absentees).
+
+---
+
+## 🏗️ Architecture & Tech Stack
+
+| Component | Tech Used | Purpose |
+| :--- | :--- | :--- |
+| **Biometrics** | `InsightFace`, `OpenCV` | Real-time Face Recognition & Liveness Detection |
+| **Frontend/UI** | `Streamlit` | Interactive Web Dashboard for all roles |
+| **Backend** | `Python`, `Pandas` | Core logic orchestration |
+| **Database** | `SQLite` | Relational storage for Users, Attendance, Marks |
+| **GenAI** | `OpenAI API`, `LangChain` | RAG for Quizzes & Natural Language-to-SQL |
+| **Voice** | `OpenAI Whisper` | Speech-to-Text transcription for analytics |
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+EduFace_AI/
 │
 ├── app.py                   # Main Streamlit Web Application (The Dashboard)
 ├── auth.py                  # Role-based login logic
@@ -19,12 +66,3 @@
 │
 ├── requirements.txt
 └── README.md
-⚡ Quick Start (Hackathon Mode)Clone the Repo:Bashgit clone https://github.com/yourusername/EduFace-AI.git
-Install Dependencies:Bashpip install -r requirements.txt
-Configure Secrets:Create a .env file:Code snippetOPENAI_API_KEY=sk-proj-....
-Run the Platform:Bash# Terminal 1: Run the Web Dashboard
-streamlit run app.py
-
-# Terminal 2: Run the Face Recognition Node
-python core_ai/face_rec_service.py
-🔮 Future RoadmapMobile App integration for students.Emotion analysis during class for engagement tracking.Integration with Google Classroom API.
